@@ -1,0 +1,86 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.p1 {
+    margin: auto auto;
+    padding: 20px;
+    background: url('123.png') 100% / cover no-repeat, url('123.png') 100% / cover no-repeat;
+}
+
+.m3 {
+    font: bold 20px/1 Tahoma, Arial, sans-serif; /*font: font-weight font-size / line-height font-family*/
+    color: white;
+    border: 10px dashed rgba(255,255,255, .3);    /* width type color */
+    text-transform: uppercase;
+    text-decoration: underline overline;
+}
+
+.m3 p:nth-child(3) {
+    transition: .5s;
+}
+
+.m3 p:not(:nth-child(3)) {
+    width: calc(30px + 50px);
+    color: red;
+}
+
+.m3 p:nth-child(3):hover {
+    cursor: pointer;
+    transition: .5s;
+    perspective: 50px;
+    transform: rotateY(60deg);
+    color: blue;
+}
+
+.m3 p {
+    opacity: 1;
+}
+
+.m2 {
+    font-size: 80px;
+    background: none
+}
+
+
+body {
+    font-size: 12px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    margin: 0;
+    background: grey;
+}
+
+h2 {
+    color: red;
+    font-size: 40px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    color: aqua;
+}
+
+.our-list {
+    list-style-type: square;
+    border-radius: 5px;
+}
+
+.our-list li {
+    display: inline-block;
+}
+
+.sdfsdfsdfsdfsdf {
+
+}
+
+#hyperlink-vkcom {
+    color: aqua;
+}
+
+.image {
+    height: 50px;
+}
