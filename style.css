@@ -47,6 +47,10 @@ div {
     padding: 0;
 }
 
+.menu-list-dark .menu-item .menu-link, .menu-list-dark .menu-item .menu-link:hover:before {
+    color: #34495E;
+}
+
 .menu-item {
     display: inline-block;
     margin-left: 40px;
@@ -62,9 +66,18 @@ div {
     text-transform: uppercase;
     color: #ECF0F1;
     text-decoration: none;
+    position: relative;
 }
 
-.menu-link:hover {
+.menu-link:hover:before {
+    content: '';
+    position: absolute;
+    width: 44px;
+    height: 3px;
+    top: calc(50% - 2px);
+    left: calc(50% - 22px);
+    transform: rotate(-45deg);
+    background: #FFFFFF;
     text-decoration: underline;
 }
 
@@ -84,33 +97,11 @@ div {
     color: #FFFFFF;
     display: block;
     width: 750px;
+    height: 170px;
     margin: 0;
-}
-
-.title-area::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 375px;
-    height: 160px;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-}
-
-.title-area-white {
-    color: #34495E;
-}
-
-.title-area-white::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    overflow: hidden;
+    background: linear-gradient(to right, #FFF 0%, #FFF 49.99%, #34495E 50%, #34495E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .top-area {
@@ -124,8 +115,12 @@ div {
     font: 800 12px/15px 'Merriweather Sans', Tahoma, serif;
     letter-spacing: 0.7px;
     text-transform: uppercase;
-    color: #34495E;
+    color: #FFFFFF;
     text-decoration: none;
+}
+
+.page-title-dark {
+    color: #34495E;
 }
 
 .bottom-area {
@@ -138,19 +133,36 @@ div {
     padding: 0;
     margin: 0;
 }
-
 .social-item {
     display: inline-block;
     margin-left: 40px;
 }
-
 .social-item:first-child {
     margin-left: 0;
 }
 .social-link {
-    font: bold 12px/15px 'Merriweather Sans', Tahoma, serif;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: #34495E;
+    display: block;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
     text-decoration: none;
+}
+.social-list-dark .social-item .social-link {
+    border-color: #34495E;
+}
+.social-link .fab {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 23px;
+}
+.social-list-dark .social-item .social-link .fab {
+    color: #34495E;
+}
+.social-list-dark .social-item .social-link:hover .fab {
+    color: darkred;
+}
+.social-link:hover .fab  {
+    color: darkred;
 }
